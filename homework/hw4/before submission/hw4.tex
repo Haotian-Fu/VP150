@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{bold-extra}
+\usepackage{appendix}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{multicol,multirow}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{cases}
+\geometry{a4paper,left=1in,right=1in,top=1in,bottom=1in}
+\begin{document}
+\centerline{\Huge{{\textbf{PHYSICS I\ \ Problem Set 4}}}}
+\vspace{0.5cm}
+\leftline{\large{Name: Haotian Fu}}
+\rightline{\large{Student ID: 520021910012}}
+\paragraph{\large \textbf{Problem 1}}~{\textbf{Solution}}
+\vspace{2mm}\\
+\noindent (a) According to the auxiliary Angle formula, we have
+\begin{align*}
+	x(t) = B\cos\omega_0t + C\sin\omega_0t = \sqrt{B^2+C^2} \cos(\omega_0t + \varphi)
+\end{align*}
+\par where $\varphi = -\arccos\frac{B}{\sqrt{B^2+C^2}}$
+\par Let $A = \sqrt{B^2+C^2}$ and $\phi = \varphi$, we get
+\begin{align*}
+	x(t) = A\cos(\omega_0t + \phi)
+\end{align*}
+\par Therefore, we conclude that
+\begin{align*}
+	x(t) = B\cos\omega_0t + C\sin\omega_0t\quad \Leftrightarrow\quad x(t) = A\cos(\omega_0t + \phi)
+\end{align*}
+\noindent (b) According to question description, we can denote the equation of motivation for SHO as $x(t) = A\cos(\omega_0t + \phi)$. Then we can express $v(t)$ as
+\begin{align*}
+	v(t) = \mathop{x(t)}\limits^\cdot = -A\omega_0\sin(\omega_0t+\phi)
+\end{align*}
+\par Then we take the initial conditions into consideration
+\begin{numcases}{}
+	x(0) = A\cos\phi = x_0 \\
+	v(0) = -A\omega_0\sin\phi = v_0 
+\end{numcases}
+\par Then we calculate
+\begin{align}
+	\cos^2\phi + \sin^2\phi = \left( \frac{x_0}{A} \right)^2 + \left( \frac{v_0}{-A\omega_0} \right)^2 = \frac{\omega_0^2x_0^2 + v_0^2}{\omega_0^2A^2} = 1
+\end{align}
+\par According to (3) we get
+\begin{align}
+	A = \sqrt{x_0^2 + \frac{v_0^2}{\omega_0^2}}
+\end{align}
+\par Apply (4) into (1)(2) we get
+\begin{align}
+	\phi = \arctan\left( -\frac{v_0}{\omega_0x_0} \right)
+\end{align}
+
+\paragraph{\large \textbf{Problem 2}}~{\textbf{Solution}}
+\vspace{2mm}
+\par Suppose the system is horizontal and set downwards as the positive direction. Figure 1(a) shows the free body diagram when the system is at its equilibrium while Figure 1(b) shows free body diagram when there is a minor disturbance applied onto the cylinder. Assume the density of the liquid is $\rho$, the acceleration of SHO is $a$, the deviation from the equilibruim position is $x$, the angular frequency of SHO is $\omega$, the net force is $F$. Then according to Archimedes’ principle
+\begin{align}
+	F = -\rho gSx
+\end{align}
+\par According to Newton's second law
+\begin{align}
+	\frac{w}{g}\cdot a = F
+\end{align}
+\par Due to SHO, we know
+\begin{align}
+	\mathop{x}\limits^{\cdot\cdot} = a = -\omega^2x
+\end{align}
+\par The relationship between angular velocity and period
+\begin{align}
+	\omega T = 2\pi
+\end{align}
+\par Solving (6)(7)(8)(9)
+\begin{align}
+\Rightarrow\quad \rho = \frac{4\pi^2w}{g^2T^2S}
+\end{align}
+
+\paragraph{\large \textbf{Problem 3}}~{\textbf{Solution}}
+\vspace{2mm}
+\par Suppose the ground is our inertial FoR. We may as well assume the equation of motivation for SHO is $x(t) = A\cos(\omega t+\phi)$, where $A$ is amplitude, $\omega$ is angular frequency, $\phi$ is initial phase. According to SHO, we have
+\begin{align*}
+	a(t) = \mathop{x(t)}\limits^{\cdot\cdot} = -\omega^2A\cos(\omega t+\phi)
+\end{align*}
+\par The maximum of acceleration in SHO cannot be greater than acceleration of gravity $g$ if the block is still in contact with the surface of the platform. Namely
+\begin{align*}
+	\omega^2A \leq g
+\end{align*}
+\par Therefore, we get
+\begin{align*}
+	\omega \leq \sqrt{\frac{g}{A}}
+\end{align*}
+\par The maximum angular frequency is $\sqrt{\frac{g}{A}}$.
+
+\paragraph{\large \textbf{Problem 4}}~{\textbf{Solution}}
+\vspace{2mm}
+\par The general expression of critical damped harmonic oscillator
+\begin{align}
+	x(t) = D_1e^{-\frac{b}{2m}t} + D_2te^{-\frac{b}{2m}t}
+\end{align}
+\par Let (11) = 0, the solution numbers of $t$ represents how many times the oscillating mass pass through the equilibrium position.
+\begin{align}
+	D_1e^{-\frac{b}{2m}t} + D_2te^{-\frac{b}{2m}t} &= 0\\
+	(D_1 + D_2t)e^{-\frac{b}{2m}t} &= 0
+\end{align}
+\par Since $e^{-\frac{b}{2m}t}$ is always greater than 0, the equation(13) at most has only one solution $t = -\frac{D_1}{D_2}$ when $D_2 \neq 0$ or has no solution when $D_2 = 0$. Namely, the oscillating mass can pass through the equilibrium position at most once.
+\end{document}

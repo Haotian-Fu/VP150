@@ -1,0 +1,242 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{bold-extra}
+\usepackage{appendix}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{multicol,multirow}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\geometry{a4paper,left=1in,right=1in,top=1in,bottom=1in}
+\begin{document}
+\centerline{\Huge{{\textbf{PHYSICS I\ \ Problem Set 8}}}}
+\vspace{0.5cm}
+\leftline{\large{Name: Haotian Fu}}
+\rightline{\large{Student ID: 520021910012}}
+\paragraph{\large \textbf{Problem 1}}~{\textbf{Solution}}
+\vspace{2mm}
+
+Due to elastic collision, the kinetic energy and momentum remain constant. Suppose the
+velocity of the ball is $V_1$ and the velocity of the block is $V_2$. Then
+
+Conservation of kinetic energy
+\begin{align}
+    \frac{1}{2}mV_0^2 = \frac{1}{2}mV_1^2 + \frac{1}{2}(2m)V_2^2
+\end{align}
+
+Conservation of momentum
+\begin{align}
+    m\bar{V_0} = m\bar{V_1} + (2m)\bar{V_2}
+\end{align}
+
+Solving Eq.(1)(2)
+\begin{equation}
+    \left\lbrace
+        \begin{aligned}
+            V_1 &= -\frac{1}{3}V_0\\
+            V_2 &= \frac{2}{3}V_0
+        \end{aligned}
+    \right.
+\end{equation}
+
+Since $V_1$ changes the sign, namely, opposite to its initial direction, the ball will
+never hit the block again thus no longer having no effect on the spring. Therefore, the
+energy of system of the block and spring is conserved.
+
+Conservation of energy
+\begin{align}
+    \frac{1}{2}(2m)V_2^2 = \frac{1}{2}kx_{\rm max}^2
+\end{align}
+
+Therefore
+\begin{align}
+    x_{\rm max} = \frac{2}{3}\sqrt{\frac{2m}{k}}V_0
+\end{align}
+
+\paragraph{\large \textbf{Problem 2}}~{\textbf{Solution}}
+\vspace{2mm}
+
+The block system moves in four statges: 1) uniform linear motion; 2) simple
+harmonic motion; 3) uniform linear motion. Suppose the times for each stage is $t_1,t_2,
+t_3,t_4$ correspondingly.
+
+Apparently
+\begin{align}
+    t_1 = t_3 = \frac{L}{V_0}
+\end{align}
+
+Then for the SHO.
+\begin{align}
+    \omega &= \sqrt{\frac{2k}{m}}\\
+    T &= \frac{2\pi}{\omega}
+\end{align}
+
+Solving Eq.(7)(8)
+\begin{align}
+    t_2 = \frac{T}{2} = \pi\sqrt{\frac{m}{2k}}
+\end{align}
+
+Therefore
+\begin{align}
+    t_{\rm total} = t_1 + t_2 + t_3 = \frac{2L}{V_0} + \pi\sqrt{\frac{m}{2k}}
+\end{align}
+
+\paragraph{\large \textbf{Problem 3}}~{\textbf{Solution}}
+\vspace{2mm}
+
+Center of mass
+\begin{align}
+    \bar{r}_{\rm cm} = \frac{\sum\limits_{i=1}^3 m_i\bar{r}_i}{\sum\limits_{i=1}^3 m_i} =
+    \left( \frac{7}{6},2,\frac{17}{6} \right)
+\end{align}
+
+Newton's second law
+\begin{align}
+    F = \sum\limits_{i=1}^3 m_i a
+\end{align}
+
+After $t=2s$
+\begin{align}
+    \bar{r}_{{\rm cm}_{\rm final}} = \left( \frac{669}{2},2,\frac{17}{6} \right)
+\end{align}
+
+unit: cm
+
+\paragraph{\large \textbf{Problem 4}}~{\textbf{Solution}}
+\vspace{2mm}
+
+(a) 
+\begin{align}
+    m &= Al\rho\\
+\Rightarrow\qquad {\rm d}m &= A\rho {\rm d}l
+\end{align}
+
+Suppose for every $i$th ${\rm d}l$, its position is $x$.
+
+Center of mass ($x-$coordinate)
+\begin{align}
+    \bar{r}_{\rm cm} = \frac{\int_0^l A\rho{\rm d}l\cdot x}{\int_0^l A\rho{\rm d}l} 
+    = \frac{\int_0^l A\rho l {\rm d}x}{A\rho l} = \frac{\frac{1}{2}A\rho l^2}{A\rho l}
+    = \frac{1}{2}l
+\end{align}
+
+(b) Analogously, for every $i$th ${\rm d}l$, its position is $x$.
+\begin{align}
+    m &=  \int_0^l A\alpha x {\rm d}x = \frac{1}{2}A\alpha l^2\\
+\Rightarrow\qquad {\rm d}m &= A\alpha x{\rm d}x
+\end{align}
+
+
+Center of mass ($x-$coordinate)
+\begin{align}
+    \bar{r}_{\rm cm} = \frac{\int\limits_{\rm rod} x {\rm d}m}{m} = \frac{\int_0^l x \cdot 
+    A\alpha x{\rm d}x}{m}
+    = \frac{\frac{1}{3}A\alpha l^3}{\frac{1}{2}A\alpha l^2} = \frac{2}{3}l
+\end{align}
+
+\paragraph{\large \textbf{Problem 5}}~{\textbf{Solution}}
+\vspace{2mm}
+
+\noindent \textbf{Method 1}
+
+Suppose the velocity of the fisherman is $v_1$ and the velocity of the boat is $v_2$.
+The distance the boat has moved is $x$.
+
+Conservation of momentum
+\begin{align}
+    mv_1 + Mv_2 = 0
+\end{align}
+
+Multiple time $t$ on both sides of Eq.(22)
+\begin{align}
+    mS_1 + MS_2 = 0
+\end{align}
+
+where the distance the fisherman travels $S_1=l-x$ and the distance the boat moves $S_2=-x$.
+
+Therefore
+\begin{align}
+    x = \frac{m}{m+M}\ l
+\end{align}
+
+\noindent \textbf{Method 2}
+
+Suppose the original position of the fisherman is the origin and the direction the man moves
+is the positive $x-$axis.
+
+In the beginning
+Center of mass
+\begin{align}
+    \bar{r}_{\rm cm1} = \frac{M\times \frac{l}{2}}{m+M}
+\end{align}
+
+In the end
+Center of mass
+\begin{align}
+    \bar{r}_{\rm cm2} = \frac{m\times (l-x) + M\times (\frac{l}{2}-x)}{m+M}
+\end{align}
+
+Due to conservation of momentum, the center of mass does not move. Thus
+\begin{align}
+    \bar{r}_{\rm cm1} = \bar{r}_{\rm cm2}
+\end{align}
+
+Therefore
+\begin{align}
+    x = \frac{m}{m+M}\ l
+\end{align}
+
+\paragraph{\large \textbf{Problem 6}}~{\textbf{Solution}}
+\vspace{2mm}
+
+At time $t$, the mass of the rocket
+\begin{align}
+    M = m_0 - \alpha t
+\end{align}
+
+During time peirod ${\rm d}t$, the mass of gas ejected
+\begin{align}
+    {\rm d}m = \alpha {\rm d}t
+\end{align}
+
+Suppose the velocity of the rocket when it ejects ${\rm d}m$ gas is ${\rm d}v$, the 
+constant speed of gas ejected is $u$.
+\begin{align}
+    u{\rm d}m = M{\rm d}v
+\end{align}
+
+Solving Eq.(27)(28)(29)
+\begin{align}
+    {\rm d}v = \frac{\alpha}{m_0 - \alpha t}u {\rm d}t
+\end{align}
+
+Integrate Eq.(30)
+\begin{align}
+    v(t) = u\ln\frac{m_0}{m_0 - \alpha t}
+\end{align}
+
+After collision, the velocity of the rockert changes its direction, Thus when the rocket stops
+at the first time
+\begin{align}
+    |v(t)| = 2|v(T)|
+\end{align}
+
+Therefore
+\begin{align}
+    t = 2T - \frac{\alpha T^2}{m_0}\\
+    \Delta t = T - \frac{\alpha T^2}{m_0}
+\end{align}
+
+Plug the data provided in the problem
+\begin{align}
+    \Delta t &= 9\ {[\rm s]}
+\end{align}
+
+\end{document}

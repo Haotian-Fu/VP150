@@ -1,0 +1,144 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{bold-extra}
+\usepackage{appendix}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{multicol,multirow}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\geometry{a4paper,left=1in,right=1in,top=1in,bottom=1in}
+\begin{document}
+\centerline{\Huge{{\textbf{PHYSICS I\ \ Problem Set 12}}}}
+\vspace{0.5cm}
+\leftline{\large{Name: Haotian Fu}}
+\rightline{\large{Student ID: 520021910012}}
+\section*{\large \textbf{Problem 1}}
+
+{\textbf{Solution}}
+
+Suppose the density of the rod is $\rho$. Since it is uniform, $\rho = \frac{M}{L} = \frac{dM}{dL}$.
+
+Therefore, mass of the rod
+\begin{align}
+	dM = \rho ds
+	\label{P1_mass}
+\end{align}
+where $s$ denotes the distance on the rod from its one end.
+
+Then we can denote the gravitational force
+\begin{align}
+	dF = \frac{dM \cdot m}{(x+s)^2} = \frac{m\rho ds}{(x+s)^2}
+	\label{P1_gravitation}
+\end{align}
+
+Then integrate Eq. (\ref{P1_gravitation})
+\begin{align}
+ F &= \int_0^{L} -G\frac{m\rho ds}{(x+s)^2} \nonumber\\
+ &= -\frac{GMm}{L} \int_0^L \frac{1}{(x+s)^2} ds \nonumber\\
+ &= -\frac{GMm}{L} \int_x^{x+L} \frac{1}{(x+s)^2} d(x+s) \nonumber\\
+ &= \frac{GMm}{L} \frac{1}{t} \lvert_{x}^{x+L} \nonumber\\
+ &= -\frac{GMm}{x(x+L)}
+ \label{P1_answer}
+\end{align}
+
+Therefore, the magnitude of the
+gravitational force the rod exerts on the particle is $F = \frac{GMm}{x(x+L)}$. When $x \gg L$, $x+L \approx x$, thus $F = \frac{GMm}{x^2}$.
+
+
+\section*{\large \textbf{Problem 2}}
+
+{\textbf{Solution}}
+
+\begin{enumerate}[(a)]
+\item First we denote
+	\begin{align}
+		dU = - G\frac{dM \cdot m}{\sqrt{a^2+x^2}}
+		\label{P2_gravitation}
+	\end{align}
+	
+	Then integrate Eq. (\ref{P2_gravitation})
+	\begin{align}
+		U &= \int_0^M -G\frac{m dM}{\sqrt{a^2+x^2}} \nonumber\\
+		&= -\frac{GMm}{\sqrt{a^2+x^2}}
+		\label{P2_answer_a}
+	\end{align}
+
+\item When $x \gg a$, $a^2+x^2 \approx x^2$. Thus
+\begin{align}
+	U = -\frac{GMm}{x}
+	\label{P2_answer_b}
+\end{align}
+
+\item Apparently, the direction of gravitational force is pointing from the particle to the center of the ring.
+
+Then we denote the gravitational force
+\begin{align}
+	dF = -G\frac{dM \cdot m}{a^2+x^2}
+\end{align}
+
+Thus
+\begin{align}
+	F &= -\frac{GMm}{a^2+x^2} \cdot \frac{x}{\sqrt{a^2+x^2}} \nonumber\\
+	&= -\frac{GMmx}{(a^2+x^2)^{3/2}}
+	\label{P2_answer_c}
+\end{align}
+
+When $x \gg a$, $a^2+x^2 \approx x^2$. Thus
+\begin{align}
+	F = -\frac{GMm}{x^2}
+\end{align}
+
+\item When $x=0$, according to Eq. (\ref{P2_answer_a}), the potential energy is $-\frac{GMm}{a}$ and according to Eq. (\ref{P2_answer_c}), the force is zero.
+\end{enumerate}
+
+\section*{\large \textbf{Problem 3}}
+
+{\textbf{Solution}}
+
+
+Based on what we learned in the lecture, only inner part of the sphere will exert force on the object. Suppose the distance between the object and the center of the uniform planet is $x$. Then
+\begin{align}
+	F &= -G\frac{m}{x^2} \cdot \left( \frac{x}{R} \right)^3M\\
+	F &= ma
+\end{align}
+Thus
+\begin{align}
+	\ddot{x} = a = -\frac{GMx}{R^3}
+\end{align}
+Namely
+\begin{align}
+	\ddot{x} + 	\frac{GM}{R^3}x = 0
+	\label{SHM}
+\end{align}
+which satisfies the feature of SHM.
+
+In addtion, according to the coefficient in Eq. (\ref{SHM}), we get
+\begin{align}
+	\omega &= \sqrt{\frac{GM}{R^3}}\\
+	T &= \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{R^3}{GM}}
+	\label{period1}
+\end{align}
+
+For the satellite orbiting around the planet close to its surface
+\begin{align}
+	\omega^2 R = G\frac{M}{R^2}
+\end{align}
+Thus
+\begin{align}
+	T = 2\pi \sqrt{\frac{R^3}{GM}}
+	\label{period2}
+\end{align}
+
+It can be seen that Eq. (\ref{period1}) is equal to Eq. (\ref{period2}), showing that the periods of the object and satellite orbiting around the planet close to its surface are the same.
+
+The result will not change. Since the expression of $\omega$ and $T$ do not consist of any notations of distance while the change of angle will only cause the change of distance in the gravitation formula, the final result will not change.
+
+\end{document}

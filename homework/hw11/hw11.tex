@@ -1,0 +1,232 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{bold-extra}
+\usepackage{appendix}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{listings}
+\usepackage{multicol,multirow}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{extarrows}
+\usepackage{ulem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\geometry{a4paper,left=1in,right=1in,top=1in,bottom=1in}
+\begin{document}
+\centerline{\Huge{{\textbf{PHYSICS I\ \ Problem Set 11}}}}
+\vspace{0.5cm}
+\leftline{\large{Name: Haotian Fu}}
+\rightline{\large{Student ID: 520021910012}}
+\section*{\large \textbf{Problem 1}}~{\textbf{Solution}}
+
+\begin{enumerate}[(a)]
+	\item According to the FBD, we have
+	\begin{align}
+	\left\{
+		\begin{array}{l}			
+				f \cdot h = F \cdot \frac{1}{2}h\\
+				\mu_s(T\cos(36.9^\circ) + W) = f\\
+				F = f + T \cdot \sin(36.9^\circ)
+		\end{array}
+	\right.
+	\label{P1(a)}
+	\end{align}
+	
+	Solving Eq. (\ref{P1(a)}), we know
+	\begin{align}
+	\left\{
+		\begin{array}{l}			
+				T = \frac{1000}{3} N\\
+				f = 200 N\\
+				F = 400N
+		\end{array}
+	\right.
+	\label{P1(a)_sol}
+	\end{align}
+	
+	\item Analogously, we list equations as follows
+	\begin{align}
+	\left\{
+		\begin{array}{l}			
+				f \cdot h = F \cdot \left( 1-\frac{4}{10} \right) h\\
+				\mu_s(T\cos(36.9^\circ) + W) = f\\
+				F = f + T \cdot \sin(36.9^\circ)
+		\end{array}
+	\right.
+	\label{P1(b)}
+	\end{align}
+	
+	Solving Eq. (\ref{P1(b)}), we know
+	\begin{align}
+	\left\{
+		\begin{array}{l}			
+				T = 750 N\\
+				f = 300 N\\
+				F = 750 N
+		\end{array}
+	\right.
+	\label{P1(b)_sol}
+	\end{align}
+	
+	\item Suppose the \textbf{critical height} is $xh$ where $x \in (0,1)$. Then we get
+	\begin{align}
+	\left\{
+		\begin{array}{l}			
+				f \cdot h = F \cdot \left( 1-x \right)h\\
+				\mu_s(T\cos(36.9^\circ) + W) = f\\
+				F = f + T \cdot \sin(36.9^\circ)
+		\end{array}
+	\right.
+	\label{P1(c)}
+	\end{align}
+	
+	Solving Eq. (\ref{P1(c)}), we get
+	\begin{align}
+	\left\{
+		\begin{array}{l}			
+				T = \frac{1000x}{5-7x} N\\
+				\\
+				f = \frac{600-600x}{5-7x} N\\
+				\\
+				F = \frac{600}{5-7x} N
+		\end{array}
+	\right.
+	\label{P1(c)_sol}
+	\end{align}
+	
+	Since at \textbf{critical height}, no matter how great the $F$ is, it cannot make the post slip, the denominator of our ideal "static" situation converges to 0. Namely
+	\begin{align}
+		h_{\rm critical} = \frac{5}{7} h \approx 0.71 h
+	\end{align}	
+\end{enumerate}
+
+\section*{\large \textbf{Problem 2}}~{\textbf{Solution}}
+
+Suppose the \textbf{young's modulus} of steel is $Y$. Then according to the definition of \textbf{Young's modulus}
+\begin{align}
+	Y \xlongequal{def} \frac{F/A}{\Delta L/L}
+\end{align}
+
+We denote the cross-area $A$ as
+\begin{align}
+	A = \frac{FL}{\Delta L \cdot Y}
+	\label{P2_corss-area}
+\end{align}
+
+Moreover, we know
+\begin{align}
+	A = \pi R^2 = \frac{\pi D^2}{4}
+	\label{P2_area}
+\end{align}
+where $R$ is radius of the cross-area and $D$ is the diameter of the cross-area.
+
+Then solving Eq. (\ref{P2_corss-area}) and Eq. (\ref{P2_area}), we have
+\begin{align}
+	D = \sqrt{\frac{4FL}{\pi \Delta L Y}}
+\end{align}
+where $Y$ is the \textbf{Young's modulus} of steel.
+
+\section*{\large \textbf{Problem 3}}~{\textbf{Solution}}
+
+According to the definition of Young's modulus provided in this problem
+\begin{align}
+	Y \xlongequal{def} \frac{W/A}{\Delta l/l_0}
+\end{align}
+
+Hooke's law
+\begin{align}
+	F = -k\Delta l
+\end{align}
+
+In this problem
+\begin{align}
+	W = F
+\end{align}
+
+Therefore, the magnitutde of $k$ is
+\begin{align}
+	k = \frac{YA}{l_0}
+\end{align}
+
+\section*{\large \textbf{Problem 4}}~{\textbf{Solution}}
+
+Suppose the desity of water is $\rho$. According to \textbf{Bernoulli's Equation}, for pipe C
+\begin{align}
+	p_{\rm atm} + \rho g h_1 = p_C + \frac{1}{2}\rho v_C ^2
+\label{P4_Bernoulli's Equation_1}
+\end{align}
+
+Since C and E are in the same pipe
+\begin{align}
+	p_C = p_E
+\label{P4_equilibrium}
+\end{align}
+
+For pipe E
+\begin{align}
+	p_{\rm atm} = p_E + \rho g h_2
+\label{P4_Bernoulli's Equation_2}
+\end{align}
+
+For pipe D
+\begin{align}
+	p_{\rm atm} + \frac{1}{2}\rho v_D ^2 &= p_C + \frac{1}{2}\rho v_C ^2\\
+	A_Cv_C &= A_Dv_D
+\end{align}
+
+Solving Eq. (\ref{P4_Bernoulli's Equation_1})(\ref{P4_equilibrium})(\ref{P4_Bernoulli's Equation_2}), we get
+\begin{align}
+	h_2 = 3h_1
+\end{align}
+
+
+
+
+
+\section*{\large \textbf{Problem 5}}~{\textbf{Solution}}
+
+\begin{enumerate}[(a)]
+\item Suppose the desity of water is $\rho$. According to \textbf{Bernoulli's Equation}
+	\begin{align}
+		p_{\rm atm} + \rho g h = p_{\rm atm} + \frac{1}{2}\rho v_0 ^2 + \rho g(h-y)
+	\label{P5_Bernoulli's Equation}
+	\end{align}
+	
+Then we get the initial velocity of the jet of water flowing out of the hole
+\begin{align}
+	v_0 = \sqrt{2gy}
+\end{align}
+
+Suppose the jet of water needs $t$ to hit the ground from the hole. List kinematic equations as follows.
+\begin{align}
+	\left\{
+		\begin{array}{l}			
+				\frac{1}{2}gt^2 = h-y\\
+				v_0t = D
+		\end{array}
+	\right.
+	\label{P5_kinematics}
+	\end{align}
+	
+Therefore, we finally get
+\begin{align}
+	D = \sqrt{4y(h-y)}
+\end{align}
+
+\item Suppose the polynomial $\mathcal{P} = y(h-y)$. Apparently, to maximize $D$ is to maximize $\mathcal{P}$.
+
+Since
+\begin{align*}
+	\dot{\mathcal{P}} = -2y + h
+\end{align*}
+we deduce that if and only if $y = \frac{1}{2}h$, $\mathcal{P}$ reaches its maximum.
+
+Therefore, the hole should be placed at a depth $y = h/2$ for the jet to cover a maximum horizontal distance
+\end{enumerate}
+
+
+\end{document}
